@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <title>1000 Random Symbol</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <table>
+        <form th:action="@{/sorting1}" method="POST">
+            <input type="submit" class="btn btn-default" value="Bubble Sort" />
+        </form>
+        <form th:action="@{/sorting2}" method="POST">
+            <input type="submit" class="btn btn-default" value="Insertion Sort" />
+        </form>
+        <form th:action="@{/sorting3}" method="POST">
+            <input type="submit" class="btn btn-default" value="Selection Sort" />
+        </form>
+        <form th:action="@{/sorting4}" method="POST">
+            <input type="submit" class="btn btn-default" value="Quick Sort" />
+        </form>
+        <form th:action="@{/sorting5}" method="POST">
+            <input type="submit" class="btn btn-default" value="Merge Sort" />
+        </form>
+    </table>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="arr : ${arrList}">
+            <td th:text="${arr}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
